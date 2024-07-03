@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="com.itlearn.utility.ListenerClass"/>
+    </listeners>
+    <test verbose="2" parallel="classes" preserve-order="true" name="C:/Users/ADMIN/IdeaProjects/ProjectElearning360">
+        <classes>
+
+            <class name="com.itlearn.testcases.LoginTest">
+
+            </class>
+            <class name="com.itlearn.testcases.SearchTest">
+
+            </class>
+        </classes>
+    </test>
+</suite>
