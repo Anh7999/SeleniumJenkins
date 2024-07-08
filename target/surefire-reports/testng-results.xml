@@ -1,17 +1,150 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="12" passed="10" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-03T13:49:45 ICT" name="All Test Suite" finished-at="2024-07-03T13:50:06 ICT" duration-ms="20746">
+  <suite started-at="2024-07-04T14:55:14 ICT" name="All Test Suite" finished-at="2024-07-04T14:55:44 ICT" duration-ms="29979">
     <groups>
+      <group name="loginSuccess">
+        <method signature="SearchTest.trueAccountLogin()[pri:0, instance:com.itlearn.testcases.SearchTest@56303475]" name="trueAccountLogin" class="com.itlearn.testcases.SearchTest"/>
+      </group> <!-- loginSuccess -->
     </groups>
-    <test started-at="2024-07-03T13:49:45 ICT" name="C:/Users/ADMIN/IdeaProjects/ProjectElearning360" finished-at="2024-07-03T13:50:06 ICT" duration-ms="20746">
-      <class name="com.itlearn.testcases.LoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.itlearn.testcases.LoginTest@24fabd0f]" started-at="2024-07-03T13:49:45 ICT" name="setUp" finished-at="2024-07-03T13:49:50 ICT" duration-ms="4365" status="PASS">
+    <test started-at="2024-07-04T14:55:14 ICT" name="C:/Users/ADMIN/IdeaProjects/ProjectElearning360" finished-at="2024-07-04T14:55:44 ICT" duration-ms="29979">
+      <class name="com.itlearn.testcases.SearchTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.itlearn.testcases.SearchTest@56303475]" started-at="2024-07-04T14:55:14 ICT" name="setUp" finished-at="2024-07-04T14:55:21 ICT" duration-ms="6837" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyLogin(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.itlearn.testcases.LoginTest@24fabd0f]" started-at="2024-07-03T13:49:50 ICT" name="verifyLogin" data-provider="loginDataProvider" finished-at="2024-07-03T13:49:55 ICT" duration-ms="4720" status="PASS">
+        <test-method signature="demo()[pri:0, instance:com.itlearn.testcases.SearchTest@56303475]" started-at="2024-07-04T14:55:21 ICT" name="demo" finished-at="2024-07-04T14:55:21 ICT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- demo -->
+        <test-method signature="trueAccountLogin()[pri:0, instance:com.itlearn.testcases.SearchTest@56303475]" started-at="2024-07-04T14:55:21 ICT" name="trueAccountLogin" finished-at="2024-07-04T14:55:23 ICT" duration-ms="1608" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- trueAccountLogin -->
+        <test-method signature="verifySearch(java.lang.String)[pri:0, instance:com.itlearn.testcases.SearchTest@56303475]" started-at="2024-07-04T14:55:23 ICT" name="verifySearch" data-provider="dataProvider" finished-at="2024-07-04T14:55:31 ICT" depends-on-methods="com.itlearn.testcases.SearchTest.trueAccountLogin" duration-ms="8361" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Iphone Prooducts ]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySearch -->
+        <test-method signature="verifySearch(java.lang.String)[pri:0, instance:com.itlearn.testcases.SearchTest@56303475]" started-at="2024-07-04T14:55:31 ICT" name="verifySearch" data-provider="dataProvider" finished-at="2024-07-04T14:55:38 ICT" depends-on-methods="com.itlearn.testcases.SearchTest.trueAccountLogin" duration-ms="6915" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[fridge Products]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySearch -->
+        <test-method signature="verifyText(java.lang.String)[pri:0, instance:com.itlearn.testcases.SearchTest@56303475]" started-at="2024-07-04T14:55:38 ICT" name="verifyText" data-provider="dataProvider" finished-at="2024-07-04T14:55:41 ICT" depends-on-methods="com.itlearn.testcases.SearchTest.trueAccountLogin" duration-ms="2728" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Iphone Prooducts ]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Iphone Prooducts ] but found [Iphone Products]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Iphone Prooducts ] but found [Iphone Products]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at com.itlearn.testcases.SearchTest.verifyText(SearchTest.java:36)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:834)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyText -->
+        <test-method signature="verifyText(java.lang.String)[pri:0, instance:com.itlearn.testcases.SearchTest@56303475]" started-at="2024-07-04T14:55:41 ICT" name="verifyText" data-provider="dataProvider" finished-at="2024-07-04T14:55:44 ICT" depends-on-methods="com.itlearn.testcases.SearchTest.trueAccountLogin" duration-ms="3191" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[fridge Products]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [fridge Products] but found [Iphone Products]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [fridge Products] but found [Iphone Products]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at com.itlearn.testcases.SearchTest.verifyText(SearchTest.java:36)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:834)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyText -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.itlearn.testcases.SearchTest@56303475]" started-at="2024-07-04T14:55:44 ICT" name="tearDown" finished-at="2024-07-04T14:55:44 ICT" duration-ms="86" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.itlearn.testcases.SearchTest -->
+      <class name="com.itlearn.testcases.LoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.itlearn.testcases.LoginTest@432034a]" started-at="2024-07-04T14:55:14 ICT" name="setUp" finished-at="2024-07-04T14:55:21 ICT" duration-ms="6527" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyLogin(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.itlearn.testcases.LoginTest@432034a]" started-at="2024-07-04T14:55:21 ICT" name="verifyLogin" data-provider="loginDataProvider" finished-at="2024-07-04T14:55:26 ICT" duration-ms="5287" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -32,7 +165,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLogin -->
-        <test-method signature="verifyLogin(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.itlearn.testcases.LoginTest@24fabd0f]" started-at="2024-07-03T13:49:55 ICT" name="verifyLogin" data-provider="loginDataProvider" finished-at="2024-07-03T13:49:57 ICT" duration-ms="2218" status="PASS">
+        <test-method signature="verifyLogin(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.itlearn.testcases.LoginTest@432034a]" started-at="2024-07-04T14:55:26 ICT" name="verifyLogin" data-provider="loginDataProvider" finished-at="2024-07-04T14:55:28 ICT" duration-ms="2101" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -53,7 +186,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLogin -->
-        <test-method signature="verifyLogin(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.itlearn.testcases.LoginTest@24fabd0f]" started-at="2024-07-03T13:49:57 ICT" name="verifyLogin" data-provider="loginDataProvider" finished-at="2024-07-03T13:49:59 ICT" duration-ms="2396" status="PASS">
+        <test-method signature="verifyLogin(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.itlearn.testcases.LoginTest@432034a]" started-at="2024-07-04T14:55:28 ICT" name="verifyLogin" data-provider="loginDataProvider" finished-at="2024-07-04T14:55:30 ICT" duration-ms="2025" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -74,7 +207,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLogin -->
-        <test-method signature="verifyLogin(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.itlearn.testcases.LoginTest@24fabd0f]" started-at="2024-07-03T13:49:59 ICT" name="verifyLogin" data-provider="loginDataProvider" finished-at="2024-07-03T13:50:01 ICT" duration-ms="2194" status="PASS">
+        <test-method signature="verifyLogin(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.itlearn.testcases.LoginTest@432034a]" started-at="2024-07-04T14:55:30 ICT" name="verifyLogin" data-provider="loginDataProvider" finished-at="2024-07-04T14:55:33 ICT" duration-ms="2613" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -95,7 +228,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLogin -->
-        <test-method signature="verifyLogin(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.itlearn.testcases.LoginTest@24fabd0f]" started-at="2024-07-03T13:50:01 ICT" name="verifyLogin" data-provider="loginDataProvider" finished-at="2024-07-03T13:50:04 ICT" duration-ms="2174" status="PASS">
+        <test-method signature="verifyLogin(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.itlearn.testcases.LoginTest@432034a]" started-at="2024-07-04T14:55:33 ICT" name="verifyLogin" data-provider="loginDataProvider" finished-at="2024-07-04T14:55:35 ICT" duration-ms="2216" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -116,7 +249,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLogin -->
-        <test-method signature="verifyLogin(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.itlearn.testcases.LoginTest@24fabd0f]" started-at="2024-07-03T13:50:04 ICT" name="verifyLogin" data-provider="loginDataProvider" finished-at="2024-07-03T13:50:06 ICT" duration-ms="2139" status="PASS">
+        <test-method signature="verifyLogin(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.itlearn.testcases.LoginTest@432034a]" started-at="2024-07-04T14:55:35 ICT" name="verifyLogin" data-provider="loginDataProvider" finished-at="2024-07-04T14:55:37 ICT" duration-ms="2019" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -137,7 +270,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.itlearn.testcases.LoginTest@24fabd0f]" started-at="2024-07-03T13:50:06 ICT" name="tearDown" finished-at="2024-07-03T13:50:06 ICT" duration-ms="126" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.itlearn.testcases.LoginTest@432034a]" started-at="2024-07-04T14:55:37 ICT" name="tearDown" finished-at="2024-07-04T14:55:39 ICT" duration-ms="1460" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

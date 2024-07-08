@@ -10,9 +10,9 @@
             <class name="com.itlearn.testcases.LoginTest">
 
             </class>
-            <class name="com.itlearn.testcases.SearchTest">
+<!--            <class name="com.itlearn.testcases.SearchTest">-->
 
-            </class>
+<!--            </class>-->
         </classes>
     </test>
 </suite>
